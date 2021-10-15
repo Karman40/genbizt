@@ -1,0 +1,16 @@
+body {
+    background-color: #f4f5f8;
+    font-family: Arial; 
+    text-align: justify;
+}
+
+menu {
+    font-weight: bold;
+}
+
+h2 {
+    color: #c12017;
+}
+a {
+    color: white
+}
