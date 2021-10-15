@@ -1,0 +1,77 @@
+media
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.social-icons,label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#check:checked ~ label{
+    left: 90%;
+    transform: translateY(-50%);
+}
+.social-icons label{
+    z-index: 1;
+    transition: .35s ease-in;
+}
+#check{
+    display: none;
+}
+.social-icons label #button {
+    display: flex;
+    height: 54px;
+    width: 60px;
+    background: #c12017;
+    border-radius: 5px;
+    cursor: pointer;
+}
+label #button i{
+    margin: auto;
+    font-size: 35px;
+    color: #f5f5f5;
+    transform: rotateZ(0turn);
+    transition: transform .2s linear
+}
+#check:checked ~ label #button i{
+    transform: rotateZ(0.5turn);
+}
+#check:checked ~ label #button i:before{
+    content: '\f00d';
+}
+.social-icons .icon-list {
+    padding-right: 45px;
+    transform: scaleX(0);
+    border: 2px solid #c12017;
+    border-radius: 10px;
+}
+#check:checked ~ .icon-list{
+    transform: scaleX(1);
+}
+.icon-list ul {
+    list-style: none;
+    display: flex;
+    padding: 12px 10px;
+}
+.icon-list ul li a {
+    color: #5f5f5f;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: 0.4s;
+}
+.icon-list ul li a:hover {
+    color: #c12017;
+}
+   
+
+body {
+    background-color: #f4f5f8;
+    font-family: Arial; 
+    text-align: justify;
+}
+h2 {
+    color: #c12017;
+}

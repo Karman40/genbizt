@@ -1,0 +1,14 @@
+body {
+    background-color: #f4f5f8;
+    font-family: Arial; 
+    text-align: justify;
+}
+
+h2 {
+    color: #c12017;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+ }
