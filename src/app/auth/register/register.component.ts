@@ -47,7 +47,20 @@ export class RegisterComponent implements OnInit {
       });
     }
 
-    onSubmit() {
+    // TODO: ezt kiteheted egy közös service-be és akkor csak a servict kell meghívnod
+    private validateAllFormFields(formGroup: FormGroup) {
+      Object.keys(formGroup.controls).forEach(field => {
+        const control = formGroup.get(field);
+        if (control instanceof FormControl) {
+          control.markAsTouched({onlySelf: true});
+        } else if (control instanceof FormGroup) {
+          this.validateAllFormFields(control);
+        }
+      });
+    }
+
+  onSubmit() {
+      this.validateAllFormFields(this.form);
       if (this.form.invalid) {
         // alert('invalid form');
         this.errorMessage = 'Invalid form';
